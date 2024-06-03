@@ -38,4 +38,5 @@ select regione_di_residenza, sum(importo) from fattura join cliente on fattura.i
 
 EXTRA 3
 
+select count(*) from cliente join fattura on cliente.numero_cliente = fattura.id_cliente where extract(year from anno_di_nascita) = 1980 and importo > 50
 
