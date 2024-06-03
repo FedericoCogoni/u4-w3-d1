@@ -15,8 +15,10 @@ ESERCIZIO 4
 select * from prodotti where extract(year from data_attivazione) = 2017 and (in_produzione or in_commercio = true)
 
 ESERCIZIO 5
-
+//usando on
 select * from fattura join cliente on fattura.id_cliente = cliente.numero_cliente where importo < 1000
+//usando using
+SELECT * FROM bills  JOIN client USING (client_id) WHERE amount < 1000
 
 ESERCIZIO 6
 
