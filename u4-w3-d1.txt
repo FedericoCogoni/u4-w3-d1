@@ -28,4 +28,14 @@ ESERCIZIO 8
 
 select extract (year from data_fattura) anno, count(*), sum(importo) from fattura group by anno
 
+EXTRA 1
+
+select extract(year from data_fattura) anno from fattura where tipologia = 'a' group by anno having count(*) >= 2 
+
+EXTRA 2
+
+select regione_di_residenza, sum(importo) from fattura join cliente on fattura.id_cliente = cliente.numero_cliente group by regione_di_residenza;
+
+EXTRA 3
+
 
