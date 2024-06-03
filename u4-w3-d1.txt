@@ -7,7 +7,9 @@ select nome, cognome from cliente where extract(year from anno_di_nascita) = 198
 
 ESERCIZIO 3
 
-select numero_fattura from fattura where iva = 20
+select count(*)
+from fattura
+where iva = 20;
 
 ESERCIZIO 4
 select * from prodotti where extract(year from data_attivazione) = 2017 and (in_produzione or in_commercio = true)
